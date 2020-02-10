@@ -1,0 +1,97 @@
+/* __variables__ */
+$very-weak-color: #ff0000;
+$weak-color: #ffa600;
+$medium-color: #ffea00;
+$strong-color: #44ff00;
+
+$input-height: 35px;
+/* _______________________ */
+
+/* __enviroment-styles__ */
+header {
+  display: flex;
+  justify-content: center;
+  padding: 5%;
+}
+
+main {
+  width: 50%;
+  margin: 0 auto;
+}
+/* _______________________ */
+
+/* __strength.js-styles__ */
+.form-strength {
+  position: relative;
+}
+
+#password-container input[type="password"],
+#password-container input[type="text"] {
+  background: transparent !important;
+  width: 100%;
+  text-indent: 6px;
+  -webkit-appearance: none;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -webkit-transition: border 0.25s linear, color 0.25s linear;
+  -moz-transition: border 0.25s linear, color 0.25s linear;
+  -o-transition: border 0.25s linear, color 0.25s linear;
+  transition: border 0.25s linear, color 0.25s linear;
+
+  height: $input-height !important;
+}
+
+.strength_meter {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 43px;
+  z-index: -1;
+  border-radius: 5px;
+
+  div {
+    width: 0%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 10px;
+    border-radius: 5px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+
+    height: $input-height !important;
+
+    p {
+      white-space: nowrap;
+      margin: 0;
+      padding: 0;
+      color: #fff;
+      font-size: 1.1em;
+    }
+  }
+}
+
+.very-weak {
+  background-color: $very-weak-color !important;
+  width: 30%;
+}
+.weak {
+  background-color: $weak-color !important;
+  width: 50%;
+}
+.medium {
+  background-color: $medium-color !important;
+  width: 75%;
+}
+.strong {
+  background-color: $strong-color !important;
+  width: 100%;
+}
